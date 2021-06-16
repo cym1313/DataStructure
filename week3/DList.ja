@@ -6,10 +6,10 @@ public class DList<E> {
 	protected DNode head, tail;
 	protected int size;
 
-	public DList() { // »ı¼ºÀÚ
+	public DList() { // ìƒì„±ì
 		head = new DNode(null, null, null);
-		tail = new DNode(null, head, null); // tailÀÇ ÀÌÀü ³ëµå¸¦ head·Î ¸¸µç´Ù.
-		head.setNext(tail); // headÀÇ ´ÙÀ½ ³ëµå¸¦ tail·Î ¸¸µç´Ù.
+		tail = new DNode(null, head, null); // tailì˜ ì´ì „ ë…¸ë“œë¥¼ headë¡œ ë§Œë“ ë‹¤.
+		head.setNext(tail); // headì˜ ë‹¤ìŒ ë…¸ë“œë¥¼ tailë¡œ ë§Œë“ ë‹¤.
 		size = 0;
 	}
 
@@ -21,7 +21,7 @@ public class DList<E> {
 		return size == 0;
 	}
 
-	public void insertBefore(DNode p, E newItem) { // p°¡ °¡¸®Å°´Â ³ëµå ¾Õ¿¡ »ğÀÔ
+	public void insertBefore(DNode p, E newItem) { // pê°€ ê°€ë¦¬í‚¤ëŠ” ë…¸ë“œ ì•ì— ì‚½ì…
 		DNode t = p.getPrevious();
 		DNode newNode = new DNode(newItem, t, p);
 		p.setPrevious(newNode);
@@ -29,7 +29,7 @@ public class DList<E> {
 		size++;
 	}
 
-	public void insertAfter(DNode p, E newItem) { // p°¡ °¡¸®Å°´Â ³ëµå µÚ¿¡ »ğÀÔ
+	public void insertAfter(DNode p, E newItem) { // pê°€ ê°€ë¦¬í‚¤ëŠ” ë…¸ë“œ ë’¤ì— ì‚½ì…
 		DNode t = p.getNext();
 		DNode newNode = new DNode(newItem, p, t);
 		t.setPrevious(newNode);
@@ -37,24 +37,24 @@ public class DList<E> {
 		size++;
 	}
 
-	public void delete(DNode x) { // x°¡ °¡¸®Å°´Â ³ëµå »èÁ¦
+	public void delete(DNode x) { // xê°€ ê°€ë¦¬í‚¤ëŠ” ë…¸ë“œ ì‚­ì œ
 		if (x == null)
 			throw new NoSuchElementException();
 		DNode f = x.getPrevious();
 		DNode r = x.getNext();
 		f.setNext(r);
 		r.setPrevious(f);
-		x.setPrevious(null); // xÀÇ previous¸¦ null·Î ¸¸µç´Ù.
-		x.setNext(null); // xÀÇ next¸¦ null·Î ¸¸µç´Ù.
+		x.setPrevious(null); // xì˜ previousë¥¼ nullë¡œ ë§Œë“ ë‹¤.
+		x.setNext(null); // xì˜ nextë¥¼ nullë¡œ ë§Œë“ ë‹¤.
 		size--;
 	}
 
-	public void print() { // ¿¬°á ¸®½ºÆ® ³ëµåµéÀÇ itemµéÀ» Â÷·Ê·Î Ãâ·Â
+	public void print() { // ì—°ê²° ë¦¬ìŠ¤íŠ¸ ë…¸ë“œë“¤ì˜ itemë“¤ì„ ì°¨ë¡€ë¡œ ì¶œë ¥
 		if (size > 0)
 			for (DNode p = head.getNext(); p != tail; p = p.getNext())
 				System.out.print(p.getItem() + "\t ");
 		else
-			System.out.println("¸®½ºÆ® ºñ¾îÀÖÀ½");
+			System.out.println("ë¦¬ìŠ¤íŠ¸ ë¹„ì–´ìˆìŒ");
 		System.out.println();
 	}
 }
