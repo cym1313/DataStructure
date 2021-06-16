@@ -5,13 +5,13 @@ public class DNode<E> {
 	private DNode previous;
 	private DNode next;
 
-	public DNode(E newItem, DNode p, DNode q) { // ³ëµå »ı¼ºÀÚ
+	public DNode(E newItem, DNode p, DNode q) { // ë…¸ë“œ ìƒì„±ì
 		item = newItem;
 		previous = p;
 		next = q;
 	}
 
-// get ¸Ş¼Òµå¿Í set ¸Ş¼Òµå
+// get ë©”ì†Œë“œì™€ set ë©”ì†Œë“œ
 	public E getItem() {
 		return item;
 	}
