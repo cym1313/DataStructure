@@ -2,7 +2,7 @@ package doubleLS;
 
 public class DLmain {
 	public static void main(String[] args) {
-		DList<String> s = new DList<String>(); // ÀÌÁß ¿¬°á ¸®½ºÆ® °´Ã¼ s »ı¼º
+		DList<String> s = new DList<String>(); // ì´ì¤‘ ì—°ê²° ë¦¬ìŠ¤íŠ¸ ê°ì²´ s ìƒì„±
 		s.insertAfter(s.head, "apple");
 		s.insertBefore(s.tail, "orange");
 		s.insertBefore(s.tail, "cherry");
