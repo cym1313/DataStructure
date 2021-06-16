@@ -39,6 +39,6 @@ for (Node p = last.getNext(); i<size ; p = p.getNext(), i++)
 System.out.print(p.getitem()+"\t ");
 }
 else
-System.out.println("¸®½ºÆ® ºñ¾îÀÖÀ½.");
+System.out.println("Â¸Â®Â½ÂºÃ†Â® ÂºÃ±Â¾Ã®Ã€Ã–Ã€Â½.");
 }
 }
