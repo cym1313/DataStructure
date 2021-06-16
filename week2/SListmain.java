@@ -11,15 +11,15 @@ public class SListmain {
 		s.insertFront("pear");
 
 		s.print();
-		System.out.println(": sÀÇ ±æÀÌ= " + s.size() + "\n");
-		System.out.println("Ã¼¸®°¡\t" + s.search("cherry") + "¹øÂ°¿¡ÀÖ´Ù.");
-		System.out.println("Å°À§°¡\t" + s.search("kiwi") + "¹øÂ°¿¡ÀÖ´Ù.");
+		System.out.println(": sì˜ ê¸¸ì´= " + s.size() + "\n");
+		System.out.println("ì²´ë¦¬ê°€\t" + s.search("cherry") + "ë²ˆì§¸ì—ìˆë‹¤.");
+		System.out.println("í‚¤ìœ„ê°€\t" + s.search("kiwi") + "ë²ˆì§¸ì—ìˆë‹¤.");
 		s.deleteAfter(s.head);
 		s.print();
-		System.out.println(": sÀÇ ±æÀÌ = " + s.size());
+		System.out.println(": sì˜ ê¸¸ì´ = " + s.size());
 		System.out.println();
 		s.deleteFront();
-		System.out.println(": sÀÇ ±æÀÌ = " + s.size());
+		System.out.println(": sì˜ ê¸¸ì´ = " + s.size());
 		System.out.println();
 
 		SList<Integer> t = new SList<Integer>();
@@ -29,7 +29,7 @@ public class SListmain {
 		t.insertFront(100);
 		t.insertAfter(300, t.head.getNext());
 		t.print();
-		System.out.println(": tÀÇ ±æÀÌ = " + t.size());
+		System.out.println(": tì˜ ê¸¸ì´ = " + t.size());
 
 	}
 
