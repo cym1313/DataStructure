@@ -9,10 +9,10 @@ public class main {
 		s.insert("orange");
 		s.insert("apple");
 		s.print();
-		System.out.print(": s¿« ±Ê¿Ã = " + s.size() + "\n");
+		System.out.print(": s√Ä√á ¬±√¶√Ä√å = " + s.size() + "\n");
 		s.delete();
 		s.print();
-		System.out.print(": s¿« ±Ê¿Ã = " + s.size());
+		System.out.print(": s√Ä√á ¬±√¶√Ä√å = " + s.size());
 		System.out.println();
 
 	}
